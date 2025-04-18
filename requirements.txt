@@ -1,0 +1,18 @@
+
+# requirements.txt
+google-genai==1.7.0
+streamlit
+google-generativeai # For Gemini API interaction (covers genai and generativeai.types)
+selenium          # For browser automation (web scraping)
+beautifulsoup4    # For parsing HTML
+lxml              # Efficient HTML parser used with BeautifulSoup in the script
+faiss-cpu         # For the vector similarity search cache (CPU version is generally easier)
+numpy             # Required by FAISS and for embedding arrays
+python-dotenv     # For loading .env files locally (as discussed in the README)
+
+# Note:
+# - webdriver-manager was in your list but isn't used in the original script's setup
+#   (which relies on manual ChromeDriver placement or PATH). You could adapt the script
+#   to use webdriver-manager if you prefer automated driver handling.
+# - sentence-transformers and scikit-learn were in your list but are not used by
+#   this script, which uses Google's embedding model directly.
